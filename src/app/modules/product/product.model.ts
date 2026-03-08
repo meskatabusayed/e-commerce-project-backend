@@ -75,7 +75,11 @@ const productSchema = new Schema<TProduct>(
       type: inventorySchema,
       required: true,
     },
-    isDeleted : Boolean,
+
+    isDeleted : {
+  type: Boolean,
+  default: false
+},
   },
   {
     timestamps: true,

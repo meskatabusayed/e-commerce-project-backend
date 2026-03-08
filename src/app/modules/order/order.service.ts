@@ -11,7 +11,7 @@ if (!product) {
   throw new Error("Product Not Found");
 } 
 else if (product.inventory.quantity < payload.quantity) {
-  throw new Error("Insufficient stock");
+  throw new Error("Insufficient quantity available in inventory");
 }
 
 const result = await OrderModel.create(payload);
